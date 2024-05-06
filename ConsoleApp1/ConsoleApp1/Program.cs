@@ -8,8 +8,12 @@
 			{
 				Console.WriteLine("Введите выражение (например, 2 + 2):");
 				string input = Console.ReadLine();
-
-				// Разбиваем строку на операнды и оператор
+				if (input.ToLower() == "exit")
+				{
+					Console.WriteLine("Выход из программы.");
+					break;
+				}
+			
 				string[] elements = input.Split(' ');
 				if (elements.Length != 3)
 				{
@@ -40,9 +44,11 @@
 						result = operand1 * operand2;
 						break;
 					case '/':
-						
+						if (operand2 != 0)
 							result = operand1 / operand2;
-						
+						else
+							Console.WriteLine("Деление на ноль невозможно.");
+						break;
 					default:
 						Console.WriteLine("Неизвестная операция.");
 						continue;
