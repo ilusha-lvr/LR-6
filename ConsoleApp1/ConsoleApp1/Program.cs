@@ -8,8 +8,12 @@
 			{
 				Console.WriteLine("Введите выражение (например, 2 + 2):");
 				string input = Console.ReadLine();
-
-				// Разбиваем строку на операнды и оператор
+				if (input.ToLower() == "exit")
+				{
+					Console.WriteLine("Выход из программы.");
+					break;
+				}
+			
 				string[] elements = input.Split(' ');
 				if (elements.Length != 3)
 				{
