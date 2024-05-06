@@ -6,6 +6,7 @@
 		{
 			while (true)
 			{
+				Console.WriteLine("Добро пожаловать в калькулятор!");
 				Console.WriteLine("Введите выражение (например, 2 + 2):");
 				string input = Console.ReadLine();
 
