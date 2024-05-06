@@ -50,6 +50,11 @@
 				}
 
 				Console.WriteLine("Результат: " + result);
+
+				Console.WriteLine("Завершить работу программы (Y/N)?");
+				string response = Console.ReadLine();
+				if (response.ToUpper() == "Y")
+					break;
 			}
 		}
 	}
